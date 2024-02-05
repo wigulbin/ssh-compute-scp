@@ -23,6 +23,17 @@ inputs:
       Name of the virtual machine instance to SSH into.
     required: true
 
+  
+  sourceDir:
+    description: |-
+      File you are copying
+    required: true
+    
+  targetDir:
+    description: |-
+      Directory you are copying to
+    required: true
+
   zone:
     description: |-
       Zone of the instance to connect to.
