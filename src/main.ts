@@ -77,6 +77,8 @@ export async function run(): Promise<void> {
   try {
     // Get inputs
     const instanceName = getInput('instance_name');
+    const sourceDir = getInput('sourceDir')
+    const targetDir = getInput('targetDir')
     const zone = getInput('zone');
     const user = getInput('user');
     const sshPrivateKey = getInput('ssh_private_key');
@@ -141,8 +143,9 @@ export async function run(): Promise<void> {
 
     let cmd = [
       'compute',
-      'ssh',
-      instanceTarget,
+      'scp',
+      sourceDir,
+      targetDir,
       '--zone',
       zone,
       '--ssh-key-file',
