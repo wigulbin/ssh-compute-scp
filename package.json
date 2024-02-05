@@ -18,7 +18,7 @@
     "google",
     "scp compute",
     "compute",
-    "scp",
+    "scp"
   ],
   "author": "Google LLC",
   "license": "Apache-2.0",
