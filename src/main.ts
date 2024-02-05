@@ -190,7 +190,7 @@ export async function run(): Promise<void> {
       logWarning('No authentication found, authenticate with `google-github-actions/auth`.');
     }
 
-    cmd = [...cmd, '--command', command];
+    cmd = [...cmd];
 
     if (sshArgs) {
       cmd.push(`-- ${sshArgs}`);
